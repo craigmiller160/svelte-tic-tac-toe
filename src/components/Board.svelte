@@ -9,7 +9,14 @@
         isClearMode = gameValue.isClearMode;
     });
 
-    const newGame = () => game.update((existingGame: Game) => blankGame);
+    const newGame = () =>
+        game.update((existingGame: Game) => blankGame);
+
+    const toggleClearMode = () =>
+        game.update((existingGame: Game) => ({
+            ...existingGame,
+            isClearMode: !existingGame.isClearMode
+        }));
 </script>
 
 <style lang="scss">
@@ -20,6 +27,23 @@
       .row {
         display: flex;
         flex-direction: row;
+      }
+
+      .actions {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      button {
+        border-radius: 5px;
+        background-color: lightblue;
+        cursor: pointer;
+
+        &.active {
+          background-color: lightgreen;
+        }
       }
     }
 </style>
@@ -41,7 +65,7 @@
         <Square gameKey="bottomRight" />
     </div>
     <div class="actions">
-        <button>Clear Square</button>
+        <button class:active={isClearMode} on:click={toggleClearMode}>Clear Squares</button>
         <button on:click={newGame}>New Game</button>
     </div>
 </div>
