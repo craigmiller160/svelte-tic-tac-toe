@@ -3,9 +3,13 @@
 </script>
 
 <main>
-	<Hello />
+	<h1>Hello World</h1>
 </main>
 
-<style>
-
+<style lang="scss">
+	main {
+		h1 {
+			background-color: blue;
+		}
+	}
 </style>
