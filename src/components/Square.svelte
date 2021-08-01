@@ -20,22 +20,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    cursor: pointer;
 
-  .borderRight {
-    border-right: 1px solid black;
-  }
+    &.borderRight {
+      border-right: 1px solid black;
+    }
 
-  .borderLeft {
-    border-left: 1px solid black;
-  }
+    &.borderLeft {
+      border-left: 1px solid black;
+    }
 
-  .borderTop {
-    border-top: 1px solid black;
-  }
+    &.borderTop {
+      border-top: 1px solid black;
+    }
 
-  .borderBottom {
-    border-bottom: 1px solid black;
+    &.borderBottom {
+      border-bottom: 1px solid black;
+    }
+
+    span {
+      cursor: pointer;
+    }
   }
 </style>
 
