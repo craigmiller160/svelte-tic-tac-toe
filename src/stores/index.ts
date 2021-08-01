@@ -1,16 +1,5 @@
-import { writable } from 'svelte/store';
+import {writable} from 'svelte/store';
 import type {Game} from '../types/Game';
-import {X_PLAYER} from '../utils/PlayerConstants';
+import {blankGame} from '../utils/GameConstants';
 
-export const game = writable<Game>({
-    currentTurn: X_PLAYER,
-    topLeft: '',
-    topCenter: '',
-    topRight: '',
-    middleLeft: '',
-    middleCenter: '',
-    middleRight: '',
-    bottomLeft: '',
-    bottomCenter: '',
-    bottomRight: ''
-})
+export const game = writable<Game>(blankGame);

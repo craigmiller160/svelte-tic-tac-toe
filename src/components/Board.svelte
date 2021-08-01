@@ -1,5 +1,15 @@
-<script>
+<script lang="ts">
     import Square from "./Square.svelte";
+    import {game} from "../stores";
+    import type {Game} from '../types/Game';
+    import {blankGame} from '../utils/GameConstants';
+
+    let isClearMode: boolean = false;
+    game.subscribe((gameValue: Game) => {
+        isClearMode = gameValue.isClearMode;
+    });
+
+    const newGame = () => game.update((existingGame: Game) => blankGame);
 </script>
 
 <style lang="scss">
@@ -29,5 +39,9 @@
         <Square gameKey="bottomLeft" />
         <Square gameKey="bottomCenter" />
         <Square gameKey="bottomRight" />
+    </div>
+    <div class="actions">
+        <button>Clear Square</button>
+        <button on:click={newGame}>New Game</button>
     </div>
 </div>

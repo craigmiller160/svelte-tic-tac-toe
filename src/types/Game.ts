@@ -1,5 +1,6 @@
 export interface Game {
     currentTurn: Player;
+    isClearMode: boolean;
     topLeft: string;
     topCenter: string;
     topRight: string;

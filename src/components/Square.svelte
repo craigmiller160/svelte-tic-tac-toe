@@ -2,7 +2,7 @@
 <script lang="ts">
     import type {Game, GameKey} from '../types/Game';
     import {game} from '../stores';
-    import {getNextTurn} from '../utils/PlayerConstants';
+    import {getNextTurn} from '../utils/GameConstants';
 
     export let gameKey: GameKey;
 
