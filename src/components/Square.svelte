@@ -1,8 +1,10 @@
 
-<style>
-
+<style lang="scss">
+    .square {
+        border: 1px solid black;
+        width: 10rem;
+        height: 10rem;
+    }
 </style>
 
-<div>
-
-</div>
+<div class="square"></div>

@@ -1,15 +1,14 @@
 <script lang="ts">
+    import Square from "./components/Square.svelte";
 
 </script>
 
 <main>
-	<h1>Hello World</h1>
+    <Square />
+    <Square />
+    <Square />
 </main>
 
 <style lang="scss">
-	main {
-		h1 {
-			background-color: blue;
-		}
-	}
+
 </style>
