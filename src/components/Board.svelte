@@ -16,18 +16,18 @@
 
 <div class="board">
     <div class="row">
-        <Square />
-        <Square />
-        <Square />
+        <Square borderBottom borderRight />
+        <Square borderLeft borderBottom borderRight />
+        <Square borderLeft borderBottom />
     </div>
     <div class="row">
-        <Square />
-        <Square />
-        <Square />
+        <Square borderTop borderBottom borderRight />
+        <Square borderTop borderBottom borderRight borderLeft />
+        <Square borderTop borderBottom borderLeft />
     </div>
     <div class="row">
-        <Square />
-        <Square />
-        <Square />
+        <Square borderTop borderRight />
+        <Square borderTop borderRight borderLeft />
+        <Square borderTop borderLeft />
     </div>
 </div>
