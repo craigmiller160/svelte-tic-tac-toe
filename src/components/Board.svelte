@@ -3,6 +3,7 @@
     import {game} from "../stores";
     import type {Game} from '../types/Game';
     import {blankGame} from '../utils/GameConstants';
+    import Button from "./ui/Button.svelte";
 
     let isClearMode: boolean = false;
     game.subscribe((gameValue: Game) => {
@@ -65,7 +66,14 @@
         <Square gameKey="bottomRight" />
     </div>
     <div class="actions">
-        <button class:active={isClearMode} on:click={toggleClearMode}>Clear Squares</button>
-        <button on:click={newGame}>New Game</button>
+        <Button
+                onClick={toggleClearMode}
+                label="Clear Squares"
+                active={isClearMode}
+        />
+        <Button
+                onClick={newGame}
+                label="New Game"
+        />
     </div>
 </div>

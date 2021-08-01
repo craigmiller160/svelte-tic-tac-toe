@@ -29,4 +29,5 @@
         <strong>Current Turn: </strong>
         <span>{currentTurnValue}</span>
     </p>
+    <button>Toggle</button>
 </div>
