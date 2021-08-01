@@ -4,6 +4,12 @@
     export let borderLeft: boolean = false;
     export let borderTop: boolean = false;
     export let borderBottom: boolean = false
+
+    let showMark: boolean = false
+
+    const onSquareClick = () => {
+        showMark = !showMark;
+    };
 </script>
 
 <style lang="scss">
@@ -39,6 +45,9 @@
         class:borderLeft
         class:borderTop
         class:borderBottom
+        on:click={onSquareClick}
 >
+    {#if showMark}
     <span>X</span>
+    {/if}
 </div>
