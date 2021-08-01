@@ -13,7 +13,7 @@ export interface Game {
 }
 
 export type Player = 'X' | 'O';
-export type Score = Player & '';
+export type Score = Player | '';
 
 export type GameKey = 'topLeft' | 'topCenter' | 'topRight' |
     'middleLeft' | 'middleCenter' | 'middleRight' |
