@@ -10,6 +10,10 @@
   .square {
     width: 10rem;
     height: 10rem;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .borderRight {
@@ -36,4 +40,5 @@
         class:borderTop
         class:borderBottom
 >
+    <span>X</span>
 </div>
