@@ -36,16 +36,6 @@
         flex-direction: row;
         justify-content: space-around;
       }
-
-      button {
-        border-radius: 5px;
-        background-color: lightblue;
-        cursor: pointer;
-
-        &.active {
-          background-color: lightgreen;
-        }
-      }
     }
 </style>
 

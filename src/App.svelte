@@ -13,11 +13,6 @@
 </main>
 
 <style lang="scss">
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
     main {
       margin: 0 auto;
       display: flex;
