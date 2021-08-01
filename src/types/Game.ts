@@ -10,6 +10,6 @@ export interface Game {
     bottomRight: string;
 }
 
-export type GameKeys = 'topLeft' | 'topCenter' | 'topRight' |
+export type GameKey = 'topLeft' | 'topCenter' | 'topRight' |
     'middleLeft' | 'middleCenter' | 'middleRight' |
     'bottomLeft' | 'bottomCenter' | 'bottomRight';
