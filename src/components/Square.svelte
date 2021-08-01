@@ -24,17 +24,16 @@
     let showSquareValue: boolean;
     $: showSquareValue = squareValue !== '';
 
-    const onSquareClick = () => {
-
+    const onSquareClick = () =>
         game.update((existingGame: Game) => {
-            const nextTurn = getNextTurn(existingGame.currentTurn);
+            const nextTurn = existingGame.isClearMode ? existingGame.currentTurn : getNextTurn(existingGame.currentTurn);
+            const gameKeyValue = existingGame.isClearMode ? '' : existingGame.currentTurn;
             return {
                 ...existingGame,
                 currentTurn: nextTurn,
-                [gameKey]: existingGame.currentTurn
+                [gameKey]: gameKeyValue
             };
         });
-    };
 </script>
 
 <style lang="scss">
