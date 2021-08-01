@@ -9,3 +9,7 @@ export interface Game {
     bottomCenter: string;
     bottomRight: string;
 }
+
+export type GameKeys = 'topLeft' | 'topCenter' | 'topRight' |
+    'middleLeft' | 'middleCenter' | 'middleRight' |
+    'bottomLeft' | 'bottomCenter' | 'bottomRight';
