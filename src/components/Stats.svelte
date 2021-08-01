@@ -2,13 +2,19 @@
 <script lang="ts">
 
     import {game} from '../stores';
-    import type {Game} from '../types/Game';
+    import type {Game, Player} from '../types/Game';
     import Button from "./ui/Button.svelte";
     import {getNextTurn} from '../utils/GameConstants';
+    import {calculateWinner} from '../utils/WinnerCalculator';
 
     let currentTurnValue: string;
     game.subscribe((gameValue: Game) => {
         currentTurnValue = gameValue.currentTurn;
+    });
+
+    let winner: Player | '' = '';
+    game.subscribe((gameValue: Game) => {
+        winner = calculateWinner(gameValue) ?? '';
     });
 
     const toggleCurrentTurn = () =>
@@ -26,7 +32,10 @@
   .stats {
     display: flex;
     flex-direction: column;
-    align-items: center;
+
+    h2 {
+      text-align: center;
+    }
 
     .row {
       display: flex;
@@ -52,5 +61,11 @@
             <span>{currentTurnValue}</span>
         </p>
         <Button onClick={toggleCurrentTurn} label="Toggle" />
+    </div>
+    <div class="row">
+        <p>
+            <strong>Winner: </strong>
+            <span>{winner}</span>
+        </p>
     </div>
 </div>
