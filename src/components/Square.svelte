@@ -1,9 +1,18 @@
 
 <script lang="ts">
-    export let borderRight: boolean = false;
-    export let borderLeft: boolean = false;
-    export let borderTop: boolean = false;
-    export let borderBottom: boolean = false
+    import type {GameKey} from '../types/Game';
+
+    export let gameKey: GameKey;
+
+    let borderRight: boolean;
+    let borderLeft: boolean;
+    let borderTop: boolean;
+    let borderBottom: boolean;
+
+    $: borderRight = ['topLeft', 'topCenter', 'middleLeft', 'middleCenter', 'bottomLeft', 'bottomCenter'].includes(gameKey);
+    $: borderLeft = ['topCenter', 'topRight', 'middleCenter', 'middleRight', 'bottomCenter', 'bottomRight'].includes(gameKey);
+    $: borderTop = ['middleLeft', 'middleCenter', 'middleRight', 'bottomLeft', 'bottomCenter', 'bottomRight'].includes(gameKey);
+    $: borderBottom = ['topLeft', 'topCenter', 'topRight', 'middleLeft', 'middleCenter', 'middleRight'].includes(gameKey);
 
     let showMark: boolean = false
 

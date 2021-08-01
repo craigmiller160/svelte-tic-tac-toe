@@ -16,18 +16,18 @@
 
 <div class="board">
     <div class="row">
-        <Square borderBottom borderRight />
-        <Square borderLeft borderBottom borderRight />
-        <Square borderLeft borderBottom />
+        <Square gameKey="topLeft" />
+        <Square gameKey="topCenter" />
+        <Square gameKey="topRight" />
     </div>
     <div class="row">
-        <Square borderTop borderBottom borderRight />
-        <Square borderTop borderBottom borderRight borderLeft />
-        <Square borderTop borderBottom borderLeft />
+        <Square gameKey="middleLeft" />
+        <Square gameKey="middleCenter" />
+        <Square gameKey="middleRight" />
     </div>
     <div class="row">
-        <Square borderTop borderRight />
-        <Square borderTop borderRight borderLeft />
-        <Square borderTop borderLeft />
+        <Square gameKey="bottomLeft" />
+        <Square gameKey="bottomCenter" />
+        <Square gameKey="bottomRight" />
     </div>
 </div>
