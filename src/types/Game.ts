@@ -1,4 +1,5 @@
 export interface Game {
+    currentTurn: Player;
     topLeft: string;
     topCenter: string;
     topRight: string;
@@ -9,6 +10,8 @@ export interface Game {
     bottomCenter: string;
     bottomRight: string;
 }
+
+export type Player = 'X' | 'O';
 
 export type GameKey = 'topLeft' | 'topCenter' | 'topRight' |
     'middleLeft' | 'middleCenter' | 'middleRight' |
