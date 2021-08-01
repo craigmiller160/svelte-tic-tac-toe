@@ -1,6 +1,7 @@
 
 <script lang="ts">
-    import type {GameKey} from '../types/Game';
+    import type {Game, GameKey} from '../types/Game';
+    import {game} from '../stores';
 
     export let gameKey: GameKey;
 
@@ -14,10 +15,19 @@
     $: borderTop = ['middleLeft', 'middleCenter', 'middleRight', 'bottomLeft', 'bottomCenter', 'bottomRight'].includes(gameKey);
     $: borderBottom = ['topLeft', 'topCenter', 'topRight', 'middleLeft', 'middleCenter', 'middleRight'].includes(gameKey);
 
-    let showMark: boolean = false
+    let squareValue: string = '';
+    game.subscribe((gameValue: Game) => {
+        squareValue = gameValue[gameKey]
+    });
+
+    let showSquareValue: boolean;
+    $: showSquareValue = squareValue !== '';
 
     const onSquareClick = () => {
-        showMark = !showMark;
+        game.update((existingGame: Game) => ({
+            ...existingGame,
+            [gameKey]: 'X' // TODO improve this
+        }));
     };
 </script>
 
@@ -61,7 +71,7 @@
         class:borderBottom
         on:click={onSquareClick}
 >
-    {#if showMark}
-    <span>X</span>
+    {#if showSquareValue}
+    <span>{squareValue}</span>
     {/if}
 </div>
