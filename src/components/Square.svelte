@@ -2,6 +2,7 @@
 <script lang="ts">
     import type {Game, GameKey} from '../types/Game';
     import {game} from '../stores';
+    import {getNextTurn} from '../utils/PlayerConstants';
 
     export let gameKey: GameKey;
 
@@ -24,10 +25,15 @@
     $: showSquareValue = squareValue !== '';
 
     const onSquareClick = () => {
-        game.update((existingGame: Game) => ({
-            ...existingGame,
-            [gameKey]: 'X' // TODO improve this
-        }));
+
+        game.update((existingGame: Game) => {
+            const nextTurn = getNextTurn(existingGame.currentTurn);
+            return {
+                ...existingGame,
+                currentTurn: nextTurn,
+                [gameKey]: existingGame.currentTurn
+            };
+        });
     };
 </script>
 
