@@ -10,6 +10,8 @@
       border-radius: 5px;
       background-color: lightblue;
       cursor: pointer;
+      height: fit-content;
+      margin: 0;
 
       &.active {
         background-color: lightgreen;
