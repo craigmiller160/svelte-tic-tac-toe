@@ -7,7 +7,7 @@
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "lint": "eslint -c .eslintrc.js.old"
+    "lint": "es-lint-scripts ts"
   },
   "devDependencies": {
     "@craigmiller160/es-lint-config": "^1.1.0-beta.1",
