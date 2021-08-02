@@ -10,6 +10,7 @@
     "lint": "eslint -c .eslintrc.js.old"
   },
   "devDependencies": {
+    "@craigmiller160/es-lint-config": "^1.1.0-beta.1",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@rollup/plugin-typescript": "^8.0.0",
