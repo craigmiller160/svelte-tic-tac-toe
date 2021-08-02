@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
     parserOptions: {
         ecmaVersion: 2021,
@@ -16,6 +18,26 @@ module.exports = {
                 '*.svelte'
             ],
             processor: 'svelte3/svlete3'
+        },
+        {
+            files: [
+                '**/*.ts?(x)'
+            ],
+            parser: '@typescript-eslint/parser',
+            extends: [
+                'plugin:@typescript-eslint/recommended'
+            ],
+            settings: {
+                'import/resolver': {
+                    typescript: {
+                        project: path.resolve(process.cwd(), 'tsconfig.json')
+                    }
+                }
+            },
+            rules: {
+                '@typescript-eslint/no-unused-vars': 'error',
+                '@typescript-eslint/no-explicit-any': 'error'
+            }
         }
     ]
 };
