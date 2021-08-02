@@ -121,10 +121,8 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@craigmiller160/es-lint-config@^1.1.0-beta.1":
-  version "1.1.0-beta.1"
-  resolved "https://craigmiller160.ddns.net:30003/repository/npm-group/@craigmiller160/es-lint-config/-/es-lint-config-1.1.0-beta.1.tgz#dfb0cc5a7cc6c7ca462d9d7d7d2e2ba6f6b79764"
-  integrity sha512-TfkRLGn0v0es9QE1N7XMGGfaqOTSe6zqp4PY0AeXPqEy4+emlua5ESN2h0kzNNSPrP692vv+7f3Ihc/dRiJ1RQ==
+"@craigmiller160/es-lint-config@file:.yalc/@craigmiller160/es-lint-config":
+  version "1.1.0-beta"
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.22.1"
     "@typescript-eslint/parser" "^4.22.1"
@@ -142,6 +140,7 @@
     eslint-plugin-prettier "^3.4.0"
     eslint-plugin-react "^7.23.2"
     eslint-plugin-react-hooks "^4.2.0"
+    eslint-plugin-svelte3 "^3.2.0"
     eslint-plugin-vue "^7.9.0"
     prettier "^2.2.1"
 

@@ -7,10 +7,10 @@
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "lint": "es-lint-scripts ts"
+    "lint": "es-lint-scripts svelte"
   },
   "devDependencies": {
-    "@craigmiller160/es-lint-config": "^1.1.0-beta.1",
+    "@craigmiller160/es-lint-config": "file:.yalc/@craigmiller160/es-lint-config",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@rollup/plugin-typescript": "^8.0.0",

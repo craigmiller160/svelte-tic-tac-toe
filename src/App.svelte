@@ -1,6 +1,6 @@
 <script lang="ts">
     import Board from "./components/Board.svelte";
-    import Stats from "./components/Stats.svelte";
+    import Stats from './components/Stats.svelte';
 </script>
 
 <main>
