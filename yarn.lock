@@ -143,6 +143,7 @@
     eslint-plugin-svelte3 "^3.2.0"
     eslint-plugin-vue "^7.9.0"
     prettier "^2.2.1"
+    prettier-plugin-svelte "^2.3.1"
 
 "@eslint/eslintrc@^0.4.3":
   version "0.4.3"
@@ -1825,6 +1826,11 @@ prettier-linter-helpers@^1.0.0:
   integrity sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==
   dependencies:
     fast-diff "^1.1.2"
+
+prettier-plugin-svelte@^2.3.1:
+  version "2.3.1"
+  resolved "https://craigmiller160.ddns.net:30003/repository/npm-group/prettier-plugin-svelte/-/prettier-plugin-svelte-2.3.1.tgz#926184a490549688dbea0a8d61c1b1ae20218368"
+  integrity sha512-F1/r6OYoBq8Zgurhs1MN25tdrhPw0JW5JjioPRqpxbYdmrZ3gY/DzHGs0B6zwd4DLyRsfGB2gqhxUCbHt/D1fw==
 
 prettier@^2.2.1:
   version "2.3.2"
