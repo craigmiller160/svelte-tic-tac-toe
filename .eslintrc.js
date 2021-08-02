@@ -1,6 +1,10 @@
 const path = require('path');
 
 module.exports = {
+    root: true,
+    extends: [
+        'eslint:recommended'
+    ],
     parserOptions: {
         ecmaVersion: 2021,
         sourceType: 'module'
