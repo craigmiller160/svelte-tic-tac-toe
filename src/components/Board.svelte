@@ -5,13 +5,8 @@
     import {blankGame} from '../utils/GameConstants';
     import Button from "./ui/Button.svelte";
 
-    let isClearMode: boolean = false;
-    game.subscribe((gameValue: Game) => {
-        isClearMode = gameValue.isClearMode;
-    });
-
     const newGame = () =>
-        game.update((existingGame: Game) => blankGame);
+        game.update(() => blankGame);
 
     const toggleClearMode = () =>
         game.update((existingGame: Game) => ({
@@ -59,7 +54,7 @@
         <Button
                 onClick={toggleClearMode}
                 label="Clear Squares"
-                active={isClearMode}
+                active={$game.isClearMode}
         />
         <Button
                 onClick={newGame}

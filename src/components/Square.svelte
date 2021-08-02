@@ -16,13 +16,8 @@
     $: borderTop = ['middleLeft', 'middleCenter', 'middleRight', 'bottomLeft', 'bottomCenter', 'bottomRight'].includes(gameKey);
     $: borderBottom = ['topLeft', 'topCenter', 'topRight', 'middleLeft', 'middleCenter', 'middleRight'].includes(gameKey);
 
-    let squareValue: string = '';
-    game.subscribe((gameValue: Game) => {
-        squareValue = gameValue[gameKey]
-    });
-
     let showSquareValue: boolean;
-    $: showSquareValue = squareValue !== '';
+    $: showSquareValue = $game[gameKey] !== '';
 
     const onSquareClick = () =>
         game.update((existingGame: Game) => {
@@ -77,6 +72,6 @@
         on:click={onSquareClick}
 >
     {#if showSquareValue}
-    <span>{squareValue}</span>
+    <span>{$game[gameKey]}</span>
     {/if}
 </div>

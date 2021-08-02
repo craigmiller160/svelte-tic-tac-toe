@@ -7,15 +7,8 @@
     import {getNextTurn} from '../utils/GameConstants';
     import {calculateWinner} from '../utils/WinnerCalculator';
 
-    let currentTurnValue: string;
-    game.subscribe((gameValue: Game) => {
-        currentTurnValue = gameValue.currentTurn;
-    });
-
     let winner: Player | '' = '';
-    game.subscribe((gameValue: Game) => {
-        winner = calculateWinner(gameValue) ?? '';
-    });
+    $: winner = calculateWinner($game) ?? '';
 
     const toggleCurrentTurn = () =>
         game.update((currentGame: Game) => {
@@ -58,7 +51,7 @@
     <div class="row">
         <p>
             <strong>Current Turn: </strong>
-            <span>{currentTurnValue}</span>
+            <span>{$game.currentTurn}</span>
         </p>
         <Button onClick={toggleCurrentTurn} label="Toggle" />
     </div>
