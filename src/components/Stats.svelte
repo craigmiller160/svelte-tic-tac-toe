@@ -35,6 +35,11 @@
       flex-direction: row;
       align-items: center;
 
+      &.highlight {
+        border: 2px solid green;
+        background: lightgreen;
+      }
+
       p {
         margin-right: 1rem;
       }
@@ -55,7 +60,7 @@
         </p>
         <Button onClick={toggleCurrentTurn} label="Toggle" />
     </div>
-    <div class="row">
+    <div class="row" class:highlight={winner !== ''}>
         <p>
             <strong>Winner: </strong>
             <span>{winner}</span>
