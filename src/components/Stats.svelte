@@ -1,6 +1,5 @@
 
 <script lang="ts">
-
     import {game} from '../stores';
     import type {Game, Player} from '../types/Game';
     import Button from "./ui/Button.svelte";
