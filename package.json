@@ -7,7 +7,9 @@
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "lint": "eslint --fix './src/**/*.{js,ts,svelte}'"
+    "eslint": "eslint --fix './src/**/*.{js,ts,svelte}'",
+    "prettier": "prettier --write ./src",
+    "eslint-prettier": "eslint -c ./.eslintrc.withPrettier.js --fix './src/**/*.{js,ts,svelte}'"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
