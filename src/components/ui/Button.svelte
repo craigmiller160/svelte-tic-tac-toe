@@ -2,7 +2,7 @@
 <script lang="ts">
     export let onClick: () => void = () => {};
     export let label: string;
-    export let active: boolean = false;
+    export let active = false;
 </script>
 
 <style lang="scss">
